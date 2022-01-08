@@ -35,5 +35,5 @@ resource "vsphere_virtual_machine" "vm" {
 }
 
 output "default_ip_address" {
-  value = resource.vmware_virtual_machine.vm.default_ip_address
+  value = vmware_virtual_machine.vm.default_ip_address
 }
