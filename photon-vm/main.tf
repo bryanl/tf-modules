@@ -33,3 +33,7 @@ resource "vsphere_virtual_machine" "vm" {
     "guestinfo.userdata.encoding" = "base64"
   }
 }
+
+output "default_ip_address" {
+  value = resource.vmware_virtual_machine.vm.default_ip_address
+}
