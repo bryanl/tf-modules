@@ -8,6 +8,12 @@ variable "local_hostname" {
   description = "The hostname for the instance"
 }
 
+variable "interface" {
+  type        = string
+  description = "network interface"
+  default     = "eth0"
+}
+
 variable "ssh_pub_key_path" {
   type        = string
   description = "Path to an SSH publick key"

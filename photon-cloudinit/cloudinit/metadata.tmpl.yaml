@@ -3,6 +3,6 @@ local-hostname: "${local_hostname}"
 network:
   version: 2
   ethernets:
-    eth0:
+    ${interface}:
       dhcp4: true
       optional: true
