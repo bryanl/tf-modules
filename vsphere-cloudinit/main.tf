@@ -5,7 +5,6 @@ data "template_file" "metadata" {
     instance_id    = var.instance_id
     local_hostname = var.local_hostname
     interface      = var.interface
-    username       = var.username
   }
 }
 
@@ -18,10 +17,11 @@ data "template_file" "userdata" {
   template = file("${path.module}/cloudinit/userdata.tmpl.yaml")
 
   vars = {
-    root_password      = var.encrypted_root_password
-    photon_ssh_pub_key = chomp(file("${var.ssh_pub_key_path}"))
-    encoded_packages   = jsonencode(concat(["sudo"], var.packages))
-    additional         = var.additional_userdata
+    root_password    = var.encrypted_root_password
+    username         = var.username
+    ssh_pub_key      = chomp(file("${var.ssh_pub_key_path}"))
+    encoded_packages = jsonencode(concat(["sudo"], var.packages))
+    additional       = var.additional_userdata
   }
 }
 
