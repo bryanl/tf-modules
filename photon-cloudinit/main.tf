@@ -5,6 +5,7 @@ data "template_file" "metadata" {
     instance_id    = var.instance_id
     local_hostname = var.local_hostname
     interface      = var.interface
+    user_name      = var.username
   }
 }
 
