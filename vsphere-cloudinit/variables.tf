@@ -14,6 +14,11 @@ variable "interface" {
   default     = "eth0"
 }
 
+variable "username" {
+  type        = string
+  description = "username for accessing server"
+}
+
 variable "ssh_pub_key_path" {
   type        = string
   description = "Path to an SSH publick key"

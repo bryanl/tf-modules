@@ -4,7 +4,7 @@ users:
   - name: root
     lock-passwd: false
     passwd: ${root_password}
-  - name: photon
+  - name: ${username}
     ssh-authorized-keys:
       - ${photon_ssh_pub_key}
     sudo: "ALL=(ALL) NOPASSWD:ALL"
