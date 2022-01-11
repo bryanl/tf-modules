@@ -14,7 +14,7 @@ variable "interface" {
   default     = "eth0"
 }
 
-variable "user_name" {
+variable "username" {
   type        = string
   description = "user name"
 }
