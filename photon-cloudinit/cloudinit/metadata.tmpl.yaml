@@ -1,8 +1,0 @@
-instance-id: "${instance_id}"
-local-hostname: "${local_hostname}"
-network:
-  version: 2
-  ethernets:
-    ${interface}:
-      dhcp4: true
-      optional: true
